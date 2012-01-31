@@ -1,11 +1,25 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html><head><title></title></head><body><form action="http://cashproductionsonline.com/_gdForm/webformmailer.asp" method="POST">
-<input type="hidden" name="subject" value="iRoman Comment" />
-<input type="hidden" name="redirect" value="../iRoman/thanks.html" />
-First Name:<br/><input type="text" name="FirstName" /><br/>
-Last Name :<br/><input type="text" name="LastName" /><br/>
-Email:<br/><input type="html" name="email" /><br/>
-Comments:<br/><textarea name="comments" cols="40" rows="10">
-Type comments here.</textarea><br/>
-<input type="submit" name="submit" value="submit"/>
-<input type="hidden" name="form_order" value="alpha"/> <input type="hidden" name="form_interval" value="default"/> <input type="hidden" name="form_format" value="html"/> </form></body></html>
+<html><head><title></title></head><body>
+
+<!-- <form action="http://cashproductionsonline.com/_gdForm/webformmailer.asp" method="POST"> -->
+<form action="http://contactus.apphb.com/" method="POST">
+
+	<input type="hidden" name="subject" value="iRoman Comment" />
+	<input type="hidden" name="redirect" id="redirectUrl" value="./thanks.html" />
+	First Name:<br/><input type="text" name="FirstName" /><br/>
+	Last Name :<br/><input type="text" name="LastName" /><br/>
+	Email:<br/><input type="html" name="email" /><br/>
+	Comments:<br/><textarea name="comments" cols="40" rows="10">Type comments here.</textarea><br/>
+	<input type="submit" name="submit" value="submit"/>
+	<input type="hidden" name="form_order" value="alpha"/> 
+	<input type="hidden" name="form_interval" value="default"/> <input type="hidden" name="form_format" value="html"/> 
+
+	<script type="text/javascript">
+			window.onload=function(){
+				document.getElementById("redirectUrl").value = "http://" + location.hostname + "/" + document.getElementById("redirectUrl").value;
+			}; 
+	</script>	
+	
+</form>
+
+</body></html>
